@@ -17,7 +17,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/elodina/go-avro"
+	"github.com/kyleboyer-optum/go-avro"
 )
 
 // Fields to map should be exported

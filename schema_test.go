@@ -272,19 +272,19 @@ func TestFixedSchema(t *testing.T) {
 }
 
 func TestSchemaRegistryMap(t *testing.T) {
-	rawSchema1 := `{"type": "record", "name": "TestRecord", "namespace": "com.github.elodina", "fields": [
+	rawSchema1 := `{"type": "record", "name": "TestRecord", "namespace": "com.github.kyleboyer-optum", "fields": [
 		{"name": "longRecordField", "type": "long"}
 	]}`
 
-	rawSchema2 := `{"type": "record", "name": "TestRecord2", "namespace": "com.github.elodina", "fields": [
+	rawSchema2 := `{"type": "record", "name": "TestRecord2", "namespace": "com.github.kyleboyer-optum", "fields": [
 		{"name": "record", "type": ["null", "TestRecord"]}
 	]}`
 
 	rawSchema3 := `{"type": "record", "name": "TestRecord3", "namespace": "com.github.other", "fields": [
-		{"name": "record", "type": ["null", "com.github.elodina.TestRecord2"]}
+		{"name": "record", "type": ["null", "com.github.kyleboyer-optum.TestRecord2"]}
 	]}`
 
-	rawSchema4 := `{"type": "record", "name": "TestRecord3", "namespace": "com.github.elodina", "fields": [
+	rawSchema4 := `{"type": "record", "name": "TestRecord3", "namespace": "com.github.kyleboyer-optum", "fields": [
 		{"name": "record", "type": ["null", {"type": "TestRecord2"}, "com.github.other.TestRecord3"]}
 	]}`
 

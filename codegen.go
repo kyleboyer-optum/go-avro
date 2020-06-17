@@ -245,7 +245,7 @@ func (codegen *CodeGenerator) writeEnumConstants(info *enumSchemaInfo, buffer *b
 
 func (codegen *CodeGenerator) writeImportStatement() error {
 	buffer := codegen.codeSnippets[0]
-	_, err := buffer.WriteString(`import "github.com/elodina/go-avro"`)
+	_, err := buffer.WriteString(`import "github.com/kyleboyer-optum/go-avro"`)
 	if err != nil {
 		return err
 	}
